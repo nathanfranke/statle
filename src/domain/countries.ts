@@ -51,12 +51,6 @@ export const countries: Country[] = [
     name: "Connecticut",
   },
   {
-    code: "DC",
-    latitude: 38.905985,
-    longitude: -77.033418,
-    name: "District of Columbia",
-  },
-  {
     code: "DE",
     latitude: 38.910832,
     longitude: -75.52767,
@@ -241,12 +235,6 @@ export const countries: Country[] = [
     latitude: 41.203322,
     longitude: -77.194525,
     name: "Pennsylvania",
-  },
-  {
-    code: "PR",
-    latitude: 18.220833,
-    longitude: -66.590149,
-    name: "Puerto Rico",
   },
   {
     code: "RI",
