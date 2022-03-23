@@ -1,13 +1,7 @@
 import { DateTime } from "luxon";
 import { useCallback, useEffect, useMemo, useState } from "react";
 import seedrandom from "seedrandom";
-import {
-  areas,
-  bigEnoughCountriesWithImage,
-  countriesWithImage,
-  Country,
-  smallCountryLimit,
-} from "../domain/countries";
+import { countries, Country } from "../domain/countries";
 import { Guess, loadAllGuesses, saveGuesses } from "../domain/guess";
 
 const forcedCountries: Record<string, string> = {
@@ -77,26 +71,18 @@ export function useTodays(dayString: string): [
 function getCountry(dayString: string) {
   const currentDayDate = DateTime.fromFormat(dayString, "yyyy-MM-dd");
   let pickingDate = DateTime.fromFormat("2022-03-21", "yyyy-MM-dd");
-  let smallCountryCooldown = 0;
   let pickedCountry: Country | null = null;
 
   do {
-    smallCountryCooldown--;
-
     const pickingDateString = pickingDate.toFormat("yyyy-MM-dd");
 
     const forcedCountryCode = forcedCountries[dayString];
     const forcedCountry =
       forcedCountryCode != null
-        ? countriesWithImage.find(
-            (country) => country.code === forcedCountryCode
-          )
+        ? countries.find((country) => country.code === forcedCountryCode)
         : undefined;
 
-    const countrySelection =
-      smallCountryCooldown < 0
-        ? countriesWithImage
-        : bigEnoughCountriesWithImage;
+    const countrySelection = countries;
 
     pickedCountry =
       forcedCountry ??
@@ -105,10 +91,6 @@ function getCountry(dayString: string) {
           seedrandom.alea(pickingDateString)() * countrySelection.length
         )
       ];
-
-    if (areas[pickedCountry.code] < smallCountryLimit) {
-      smallCountryCooldown = 7;
-    }
 
     pickingDate = pickingDate.plus({ day: 1 });
   } while (pickingDate <= currentDayDate);
