@@ -22,7 +22,7 @@ import { useMode } from "../hooks/useMode";
 import { getDayString, useTodays } from "../hooks/useTodays";
 import { Twemoji } from "@teuteuf/react-emoji-render";
 
-const MAX_TRY_COUNT = 6;
+const MAX_TRY_COUNT = 4;
 
 interface GameProps {
   settingsData: SettingsData;
