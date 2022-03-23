@@ -33,9 +33,9 @@ const resources = {
         guessDistribution: "Guess distribution:",
       },
       install: {
-        title: "Worldle",
+        title: "Statle",
         descritpionTitle: "App Install:",
-        description: "Add Worldle to Home Screen to play it easily!",
+        description: "Add Statle to Home Screen to play it easily!",
         instructionTitle: "Instructions:",
         instructionActionOk: "OK",
         instructionActionCancel: "Cancel",
