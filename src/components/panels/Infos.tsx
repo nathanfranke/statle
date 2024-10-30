@@ -16,12 +16,23 @@ export function Infos({ isOpen, close, settingsData }: InfosProps) {
     <Panel title="How to play" isOpen={isOpen} close={close}>
       <div className="space-y-3 text-justify border-b-2 border-gray-200 pb-3 mb-3">
         <div>
-          Guess the <Worldle /> in 6 guesses.
+          Guess the <Worldle /> in 4 guesses.
         </div>
-        <div>Each guess must be a valid country, territory, ...</div>
+        <div>Each guess must be a valid state</div>
         <div>
           After each guess, you will have the distance, the direction and the
-          proximity from your guess and the target country.
+          proximity from your guess and the target state.
+        </div>
+        <div>
+          Modded with ❤️ by{" "}
+          <a
+            className="underline"
+            href="https://github.com/nathanfranke/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            nathanfranke
+          </a>
         </div>
       </div>
       <div className="space-y-3 text-justify border-b-2 border-gray-200 pb-3 mb-3">

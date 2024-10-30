@@ -65,7 +65,7 @@ function App() {
               ❔
             </button>
             <h1 className="text-4xl font-bold uppercase tracking-wide text-center my-1 flex-auto">
-              Wor<span className="text-green-600">l</span>dle
+              Stat<span className="text-green-600">l</span>e
             </h1>
             <button
               className="mx-3 text-xl"

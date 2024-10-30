@@ -1,9 +1,11 @@
-# Wor**l**dle
+# STAT**L**E
 
-Play this geographical wordle here: https://worldle.teuteuf.fr !
+### [Check out WORLDLE by teuteuf!](https://github.com/teuteuf/worldle)
+
+Mod of Worldle by nathanfranke - play with US states!
+
+Play this geographical wordle here: https://statle.pages.dev/
 
 ## Resources used:
 
-- Countries with long/lat => https://developers.google.com/public-data/docs/canonical/countries_csv
-- Country images => https://github.com/djaiss/mapsicon
-- French country names => https://fr.wikipedia.org/wiki/ISO_3166
+- States with long/lat => https://developers.google.com/public-data/docs/canonical/states_csv
